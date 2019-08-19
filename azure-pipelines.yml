@@ -1,6 +1,13 @@
 # ASP.NET
 - task: AzureWebApp@1
   inputs:
+    azureSubscription: 'Free Trial(2)(09f5e340-c212-4e0e-a41c-1975f6efe5fc)'
+    appType: 'webApp'
+    appName: 'TBCDevOpsDemo'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
+- task: AzureWebApp@1
+  inputs:
     appType: 'webApp'
     appName: 'TBCDevOpsDemo'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
